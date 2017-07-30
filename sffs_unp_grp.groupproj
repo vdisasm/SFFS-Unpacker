@@ -1,0 +1,44 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{6D90BD33-0E60-4729-8AF5-36E05930C701}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="sffsunpacker.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="sffsunpacker">
+        <MSBuild Projects="sffsunpacker.dproj"/>
+    </Target>
+    <Target Name="sffsunpacker:Clean">
+        <MSBuild Projects="sffsunpacker.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="sffsunpacker:Make">
+        <MSBuild Projects="sffsunpacker.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="sffsunpacker"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="sffsunpacker:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="sffsunpacker:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+    <ItemGroup Condition="'$(BuildGroup)'=='Release 32/64'">
+        <BuildGroupProject Include="sffsunpacker.dproj">
+            <ProjectGuid>{78A4EDA2-56A4-47A3-9F5A-5B11E92EF71F}</ProjectGuid>
+            <Configurations>Release</Configurations>
+            <Platforms>Win32;Win64</Platforms>
+            <Enabled>True</Enabled>
+        </BuildGroupProject>
+    </ItemGroup>
+</Project>
