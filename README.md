@@ -11,14 +11,14 @@ Catch it with **SFSniffer** created by **MasterSoft**.
 
 > Your system must be able to run 32-bit driver (SFSniffer.sys)
 
-![](img\SFSniffer.png)
+![Sniffer](img/SFSniffer.png)
 
 Now run **SFFSUnpacker** and drag'n'drop resource file
 (usually it is **resource0.dat**)
 
 It will ask you to enter AppKey.
 
-![S F F S Unpacker Enter App Key](img/SFFSUnpackerEnterAppKey.png)
+![Enter App Key](img/EnterAppKey.png)
 
 If key is incorrect you'll get error message **Failed to load SFFS header**.
 
