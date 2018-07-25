@@ -57,5 +57,5 @@ be opened in explorer after unpacking.
 
 ## Donate
 
-- Unpacker by **VDisAsm**:   ``1FFxwXUyAXeFqBFAqjMJMLMZ9N9fRrK9jc``
 - Sniffer by **MasterSoft**: ``1Aba6BfTcobqwrmeoVoZkmruk7JXS8bPp6``
+- Unpacker by **VDisAsm**:   contact me
